@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedSchoolScaffold-GH</title>
+    <!-- Tailwind CSS Play CDN Link -->
+    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Premium Native Top Bar -->
+    <header class="bg-blue-700 text-white shadow-md sticky top-0 z-50 px-4 py-3 flex justify-between items-center">
+        <h1 class="font-bold text-lg tracking-tight">MedScaffold-GH ????</h1>
+        <div id="score-badge" class="bg-blue-800 text-xs px-3 py-1 rounded-full font-semibold">Score: 0</div>
+    </header>
+
+    <main class="max-w-md mx-auto p-4 space-y-6 pb-24">
+        <!-- Progress Indicators -->
+        <section class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100 flex justify-between items-center">
+            <div>
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Current Question</p>
+                <h2 id="question-meta" class="text-sm font-semibold text-blue-600">Anatomy • Loading...</h2>
+            </div>
+            <div id="progress-text" class="text-sm font-bold text-slate-500">1 / 20</div>
+        </section>
+
+        <!-- Dynamic Question Card Box -->
+        <section class="bg-white rounded-3xl p-6 shadow-md border border-slate-100 space-y-4">
+            <p id="question-text" class="text-base font-medium leading-relaxed text-slate-900">
+                Loading clinical vignette question...
+            </p>
+            
+            <!-- Target Options Container -->
+            <div id="options-container" class="space-y-3 pt-2">
+                <!-- Buttons dynamically injected via app.js -->
+            </div>
+        </section>
+
+        <!-- Expandable Explanation Box -->
+        <section id="explanation-box" class="hidden bg-emerald-50 rounded-2xl p-5 border border-emerald-100 space-y-2">
+            <h3 class="text-sm font-bold text-emerald-800 flex items-center gap-1">
+                ?? High-Yield Clinical Rationale
+            </h3>
+            <p id="explanation-text" class="text-sm text-emerald-900 leading-relaxed">
+                Explanation logic goes here.
+            </p>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation Layer -->
+    <footer class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 px-6 py-4 flex justify-between items-center max-w-md mx-auto shadow-xl">
+        <button id="prev-btn" class="text-sm font-bold text-slate-400 hover:text-slate-600 transition">Previous</button>
+        <button id="next-btn" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-xl text-sm font-bold shadow-md transition">Next Question</button>
+    </footer>
+
+    <!-- Script Connections -->
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
